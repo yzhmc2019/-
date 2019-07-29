@@ -1,0 +1,26 @@
+<!--pages/group/group.wxml-->
+<view class='groupContainer'>
+  <view class='groupList' wx:for="{{groupData}}" wx:key="index">
+    <view class='groupItem' bindtap="goChat" data-id="{{item.id}}" data-name="{{item.name}}">
+      <image src="/images/groupListbg.png" class="groupListbg"></image>
+      <view class="groupContent">
+        <view class="iw"><image src="{{https + item.img}}"></image></view>
+        <view class='content'>
+          <view class="title">{{item.name}}</view>
+          <view class='desc'>{{item.description}}</view>
+          <view class='join'>
+            <view class="members">{{item.count}}人加入</view>
+            <view class="joinBtn">
+              <image src="/images/joinBtnbg.png"></image>
+              <text>我要加入</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="height: {{navBarH}}rpx"></view>
+</view>
+
+
+<my-footer pageFrom="group" danmuShow="{{dmControl}}" tabBarH="{{tabBarH}}"></my-footer>

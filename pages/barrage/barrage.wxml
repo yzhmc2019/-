@@ -1,0 +1,2 @@
+<!--pages/barrage/barrage.wxml-->
+<web-view src="https://yiqivr.huanchengvr.cn/audi/2019AudiSport/index_a.php?openid={{openid}}&nickname={{nicheng}}&headimg={{touxiang}}"></web-view>

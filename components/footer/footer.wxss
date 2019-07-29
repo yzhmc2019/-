@@ -1,0 +1,41 @@
+/* pages/footer/footer.wxss */
+.footerBar{
+  border-top: 3rpx solid #dadadb;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #ffffff;
+}
+.footerContainer{
+  height: 122rpx;
+  display: flex;
+}
+.navItem{
+  flex: 1;
+}
+.icon{
+  height: 79rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.indexIcon{
+  width: 49rpx;
+  height: 40rpx;
+}
+.text{
+  font-size: 20rpx;
+  color: #363636;
+  text-align: center;
+}
+.navItem.active .text{
+  color: #D90714;
+}
+.groupIcon{
+  width: 51rpx;
+  height: 48rpx;
+}
+.msgIcon{
+  width: 63rpx;
+  height: 41rpx;
+}

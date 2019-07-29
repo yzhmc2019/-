@@ -1,0 +1,42 @@
+<!--pages/homepage/homepage.wxml-->
+<view style='height: 100%;overflow-y: scroll;'>
+  <view class="banner">
+    <image src='/images/indexBanner.png'></image>
+    <!-- <video style="width: 100%;height: 100%;" show-center-play-btn="{{false}}" controls="{{false}}" autoplay='{{true}}' src="{{https + video}}" object-fit="fill" wx:if="{{video != ''}}" loop="{{true}}"></video> -->
+  </view>
+  <view class="swiperContainer">
+    <swiper previous-margin="64rpx" next-margin="64rpx" autoplay='{{true}}' circular="true" bindchange='bannerSwiperChange' interval="5000">
+      <block wx:for="{{swiperData}}" wx:key="index">
+        <swiper-item class="pswiperItem {{swiperIndex == index ? 'active' : ''}}" style="display: flex;justify-content: center;">
+          <view class='swiperItemContainer' style="width: 600rpx;height: 100%;">
+            <view class='swiperItem' bindtap="goDetails" data-id="{{item.id}}">
+              <image src="{{https + item.img_cover}}"></image>
+            </view>
+            <view class="swiperDesc">
+              <view class='content'>
+                <view class='title'>
+                  <text decode='{{true}}' class="text">{{item.title}}</text>
+                </view>
+                <view class="more" bindtap="goDetails" data-id="{{item.id}}">
+                  <image src="/images/indexxk.png"></image>
+                  <text>了解更多</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="dotC">
+    <view wx:for="{{swiperData}}" wx:key="index" class="dot {{swiperIndex == index ? 'active' : ''}}"><view class='redDot'></view></view>
+  </view>
+  <view class='listTitle'>运动车型</view>
+  <view class="listItem" wx:for="{{typeData}}" wx:key="index" bindtap="goDetails" data-id="{{item.id}}">
+    <image src="{{https + item.img_cover}}"></image>
+    <text class='listMore'>了解更多</text>
+  </view>
+
+  <view style="height: {{navBarH}}rpx"></view>
+</view>
+<my-footer pageFrom="home" danmuShow="{{dmControl}}" tabBarH="{{tabBarH}}"></my-footer>

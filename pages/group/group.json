@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "群组",
+  "usingComponents": {
+    "my-footer": "/components/footer/footer"
+  }
+}

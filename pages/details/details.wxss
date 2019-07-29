@@ -1,0 +1,49 @@
+/* pages/details/details.wxss */
+page{
+  height: 100%;
+  background: #e7e7e7;
+}
+.banner{
+  height: 507rpx;
+  width: 100%;
+  display: block;
+}
+.content{
+  /* width: 640rpx; */
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.detailVideo{
+  /* width: 640rpx; */
+  width: 100%;
+  /* height: 352rpx; */
+  margin-top: 30rpx;
+}
+.fwbContent{
+  margin-top: 30rpx;
+  padding: 0 50rpx;
+  line-height: 54rpx;
+  font-size: 30rpx;
+}
+.title1{
+  margin-top: 30rpx;
+  padding: 0 50rpx;
+  line-height: 80rpx;
+  font-size: 60rpx;
+  color: #58595b;
+}
+.title2{
+  margin-top: 12rpx;
+  padding: 0 50rpx;
+  line-height: 54rpx;
+  font-size: 50rpx;
+  color: #58595b;
+}
+.title3{
+  margin-top: 10rpx;
+  padding: 0 50rpx;
+  line-height: 54rpx;
+  font-size: 40rpx;
+  color: #58595b;
+}

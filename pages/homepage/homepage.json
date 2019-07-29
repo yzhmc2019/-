@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "my-footer": "/components/footer/footer"
+  },
+  "navigationBarBackgroundColor": "#030708",
+  "backgroundColor": "#f2f2f2",
+  "navigationBarTitleText": "Audi Sport",
+  "navigationBarTextStyle": "white"
+}

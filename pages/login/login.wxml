@@ -1,0 +1,5 @@
+<!--pages/login/login.wxml-->
+<view class="loginContainer">
+  <image src="/images/logo.png" class="logo"></image>
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录 </button>
+</view>

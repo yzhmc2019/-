@@ -1,0 +1,25 @@
+<!--pages/footer/footer.wxml-->
+<view class='footerBar' style="height: {{tabBarH}}rpx">
+  <view class="footerContainer">
+    <view class="navItem {{pageFrom == 'home' ? 'active' : ''}}" bindtap="goHome">
+      <view class="icon">
+        <image class='indexIcon' wx:if="{{pageFrom != 'home'}}" src="/images/indexIcon.png"></image>
+        <image class='indexIcon' wx:if="{{pageFrom == 'home'}}" src="/images/indexIconSelected.png"></image>
+      </view>
+      <view class='text'>首页</view>
+    </view>
+    <view class="navItem {{pageFrom == 'group' ? 'active' : ''}}" bindtap="goGroup">
+      <view class="icon">
+        <image class='groupIcon' wx:if="{{pageFrom != 'group'}}" src="/images/groupIcon.png"></image>
+        <image class='groupIcon' wx:if="{{pageFrom == 'group'}}" src="/images/groupIconSelected.png"></image>
+      </view>
+      <view class='text'>社群</view>
+    </view>
+    <view class="navItem" bindtap="goBarrage" wx:if="{{danmuShow == 1}}">
+      <view class="icon">
+        <image class='msgIcon' src="/images/msgIcon.png"></image>
+      </view>
+      <view class='text'>弹幕</view>
+    </view>
+  </view>
+</view>

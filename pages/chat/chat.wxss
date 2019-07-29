@@ -1,0 +1,188 @@
+/* pages/chat/chat.wxss */
+page{
+  height: 100%;
+  background: #f2f2f2;
+  overflow: hidden;
+}
+.membersC{
+  height: 109rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #e1e1e1;
+  background: #ffffff;
+}
+.number{
+  margin-left: 40rpx;
+}
+.number .title{
+  font-size: 24rpx;
+  color: #383838;
+}
+.number .num{
+  font-size: 19rpx;
+  color: #B8BABC;
+}
+.touxiangC{
+  margin-right: 27rpx;
+  display: flex;
+}
+.touxiang{
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-left: 14rpx;
+}
+.touxiang image{
+  width: 100%;
+  height: 100%;
+}
+.shengyu{
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 100%;
+  background: #d90714;
+  text-align: center;
+  line-height: 56rpx;
+  margin-left: 14rpx;
+  font-size: 19rpx;
+  color: #ffffff;
+}
+.inputMsg{
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background: #ffffff;
+  box-sizing: border-box;
+  border-top: 1rpx solid #e1e1e1;
+}
+.inputContainer{
+  /* height: 100%; */
+  display: flex;
+  align-items: center;
+}
+.inputc{
+  width: 558rpx;
+  height: 72rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #e1e1e1;
+  margin-left: 59rpx;
+  padding: 0 20rpx;
+}
+.xiangceIcon{
+  width: 49rpx;
+  height: 50rpx;
+  margin-left: 45rpx;
+}
+.phc{
+  font-size: 32rpx;
+  color: #BBBDBF;
+}
+.tx{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.tx image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.other{
+  display: flex;
+}
+.other .tx{
+  margin-left: 40rpx;
+}
+.other .content{
+  margin-left: 25rpx;
+  position: relative;
+  padding-bottom: 50rpx;
+}
+.msgItem{
+  padding-bottom: 40rpx;
+}
+.msgItem:first-child{
+  padding-top: 40rpx;
+}
+.textContent{
+  max-width: 509rpx;
+  border-radius: 17rpx;
+  background: #ffffff;
+  padding: 25rpx;
+  box-sizing: border-box;
+  font-size: 33rpx;
+  color: #000000;
+}
+.imgContent{
+  width: 509rpx;
+  border-radius: 17rpx;
+  background: #ffffff;
+  padding: 8rpx;
+  box-sizing: border-box;
+  font-size: 33rpx;
+  color: #000000;
+}
+.imgContent image{
+  width: 100%;
+  border-radius: 17rpx;
+  display: block;
+}
+.time{
+  font-size: 21rpx;
+  color: #A4A6A9;
+  bottom: 0;
+  position: absolute;
+  width: 509rpx;
+}
+.other .time{
+  left: 0rpx;
+}
+.my .textContent{
+  background: #f1a43d;
+}
+.my .imgContent{
+  background: #f1a43d;
+}
+.my{
+  display: flex;
+  justify-content: flex-end;
+}
+.my .tx{
+  margin-right: 40rpx;
+}
+.my .content{
+  margin-right: 25rpx;
+  position: relative;
+  padding-bottom: 50rpx;
+}
+.my .time{
+  right: 0;
+  text-align: right;
+}
+.checkImg{
+  position: fixed;
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  background: #000000;
+  opacity: 0;
+  transition: all 0.2s linear 0s;
+}
+.checkImg.active{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.closeContainer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}

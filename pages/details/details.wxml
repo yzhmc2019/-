@@ -1,0 +1,16 @@
+<!--pages/details/details.wxml-->
+<!-- <import src="../../wxParse/wxParse.wxml" /> -->
+
+<image class='banner' src="{{https + detailsData.img}}" wx:if="{{detailsData.img != ''}}"></image>
+<view class="content" wx:if="{{detailsData.content_type == 1}}">
+  <view class='title1' wx:if="{{detailsData.name != ''}}">{{detailsData.name}}</view>
+  <view class='title2' wx:if="{{detailsData.two_name != ''}}">{{detailsData.two_name}}</view>
+  <view class="title3" wx:if="{{detailsData.three_name != ''}}">{{detailsData.three_name}}</view>
+  <view style="padding: 0 50rpx;"><video class='detailVideo' src="{{detailsData.video}}" wx:if="{{detailsData.video != ''}}"></video></view>
+  <view class="fwbContent"><rich-text nodes="{{detailsData.content}}" bindtap='test'></rich-text></view>
+  <!-- <template is="wxParse" data="{{wxParseData:article1.nodes}}" /> -->
+</view>
+<view wx:if="{{detailsData.content_type == 2}}">
+  <view><rich-text nodes="{{detailsData.content}}"></rich-text></view>
+</view>
+<view style="height: {{pad}}rpx"></view>

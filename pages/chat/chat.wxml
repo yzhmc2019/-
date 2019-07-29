@@ -1,0 +1,48 @@
+<!--pages/chat/chat.wxml-->
+<view class='membersC'>
+  <view class='number'>
+    <view class='title'>群组成员</view>
+    <view class='num'>{{members}}人</view>
+  </view>
+  <view class='touxiangC'>
+    <view class='touxiang' wx:for="{{membersData}}" wx:key="index"><image src="{{item.headimgurl}}"></image></view>
+    <view class='shengyu'>{{sy}}</view>
+  </view>
+</view>
+<view style="height: {{svh}}px;background: #f2f2f2;overflow: hidden;">
+  <scroll-view bindscrolltolower="scrolltolower" bindscroll="scroll" bindscrolltoupper="scrolltoupper" scroll-with-animation="{{false}}" scroll-y style="height: {{svh}}px;background: #f2f2f2;"scroll-top="{{st}}">
+    <view id="scrollWrapper">
+      <block wx:for="{{msgData}}" wx:key="index">
+        <view class='msgItem other' wx:if="{{item.type == 'other'}}">
+          <view class='tx'><image src="{{item.headimgurl}}"></image></view>
+          <view class='content'>
+            <view class='textContent' wx:if="{{item.messageType == 'text'}}">{{item.message}}</view>
+            <view class='imgContent' wx:if="{{item.messageType == 'image'}}" data-url="{{item.message}}" bindtap="checkImg"><image lazy-load="{{true}}" mode='widthFix' src="{{https + item.message}}"></image></view>
+            <view class='time'>{{item.create_time}}</view>
+          </view>
+        </view>
+        <view class='msgItem my' wx:if="{{item.type == 'me'}}">
+          <view class='content'>
+            <view class='textContent' wx:if="{{item.messageType == 'text'}}">{{item.message}}</view>
+            <view class='imgContent' wx:if="{{item.messageType == 'image'}}" data-url="{{item.message}}" bindtap="checkImg"><image lazy-load="{{true}}" mode='widthFix' src="{{https + item.message}}"></image></view>
+            <view class='time'>{{item.create_time}}</view>
+          </view>
+          <view class='tx'><image src="{{item.headimgurl}}"></image></view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+<view class="inputMsg" style="height: {{iwh}}rpx;">
+  <view class="inputContainer" style="height: {{ich}}rpx">
+    <input class="inputc" placeholder='留下我的信息' placeholder-class='phc' confirm-type="send" cursor-spacing="{{cursorSpacing}}" bindconfirm="sendText" confirm-hold="{{true}}" value="{{sendText}}"></input>
+    <image bindtap="uploadImages" class='xiangceIcon' src="/images/xiangceIcon.png"></image>
+  </view>
+</view>
+<!-- 查看大图 -->
+<view class='checkImg {{mycheck == 1 ? "active" : ""}}'>
+  <view class="closeContainer" bindtap="close"></view>
+  <movable-area style='width: 100%;height: {{wh}}px;top: 50%;transform: translateY(-50%);'>
+    <movable-view bindchange="tuodong" bindscale="suofang" x="{{x}}" y="{{y}}" scale-value="{{sc}}" out-of-bounds="{{false}}" direction="all" inertia="true" scale="true" style='width: 100%;height: {{wh}}px;'><image src="{{https + imgUrl}}" mode='aspectFit' style='width: 100%;height: 100%;display: block;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);' bindlongpress="close"></image></movable-view>
+  </movable-area>
+</view>

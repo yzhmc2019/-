@@ -1,0 +1,27 @@
+/* pages/login/login.wxss */
+page{
+  height: 100%;
+  background: #f6f6f6;
+}
+.logo{
+  display: block;
+  width: 437rpx;
+  height: 52rpx;
+  margin: auto;
+}
+button{
+  width: 643rpx;
+  height: 96rpx;
+  border-radius: 48rpx;
+  background: #d90714;
+  color: #ffffff;
+  font-size: 37rpx;
+  letter-spacing: 6rpx;
+  border: 0;
+  margin-top: 160rpx;
+}
+.loginContainer{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
